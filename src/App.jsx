@@ -1,15 +1,14 @@
-import { useState } from 'react'
-
+import React from 'react'
+import { Outlet } from 'react-router-dom';
+import Header from './componentes/Header'
 
 
 function App() {
-
-
   return (
     <>
-      <h1 className=" bg-red-600 text-2xl font-bold underline">
-        Hello world!
-      </h1>
+      <Header/>
+
+      <Outlet />
     </>
   )
 }
