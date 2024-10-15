@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
+import HeroSecton from '../componentes/HeroSection';
 
-
-const Home = () => {
-  return (
-    <div>
-      <h1>Eu sou Home</h1>
-    </div>
-  );
-};
+function Home() {
+    return (
+        <div>
+            <HeroSecton />
+        </div>
+    );
+}
 
 export default Home;

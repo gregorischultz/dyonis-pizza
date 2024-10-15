@@ -9,7 +9,9 @@ function App() {
     <>
       <Header />
 
-      <Outlet />
+      <div className="mt-20">
+        <Outlet />
+      </div>
 
       <Footer/>
     </>
