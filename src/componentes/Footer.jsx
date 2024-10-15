@@ -6,7 +6,7 @@ import faceIMG from '../assets/faceImg.png';
 function Footer() {
     return (
         <footer className="w-full h-full p-16 relative bg-footer-color">
-            <section className="absolute left-20 top-10 flex flex-col justify-start items-start gap-6">
+            <div className="absolute left-20 top-10 flex flex-col justify-start items-start gap-6">
                 {/* Nome da Pizzaria */}
                 <h1 className="text-black text-[39.83px] font-righteous font-normal">Diony’s Pizz</h1>
 
@@ -25,10 +25,10 @@ function Footer() {
                         />
                     </a>
                 </div>
-            </section>
+            </div>
 
             {/* Horários de funcionamento */}
-            <section className="absolute h-48 left-[734px] top-10 flex flex-col justify-start gap-1">
+            <div className="absolute h-48 left-[734px] top-10 flex flex-col justify-start gap-1">
                 <h2 className="text-black text-xl font-alegreyaSans font-bold leading-[30px]">Horaires d’ouverture</h2>
                 <div className="flex justify-start items-center gap-4">
                     <p className="text-black text-sm font-montserrat leading-5">
@@ -40,13 +40,13 @@ function Footer() {
                         18:00 - 22:00
                     </p>
                 </div>
-            </section>
+            </div>
 
             {/* Endereço */}
-            
+
             <div className="w-full h-18 flex flex-col justify-end items-end gap-1">
                 <h2 className="text-black text-xl font-alegreyaSans font-bold leading-[30px] pr-28">Adresse</h2>
-                <p className="text-black text-sm font-montserrat leading-5">
+                <p className="text-black text-sm font-montserrat leading-5 pr-1">
                     130 Rue de Mellay,<br />
                     45560 Saint Denis en Val
                 </p>
@@ -56,7 +56,7 @@ function Footer() {
                 <h2 className="text-black text-xl font-alegreya-sans font-bold leading-[30px] pr-20" >Téléphone</h2>
                 <p className="text-black text-sm font-montserrat leading-5 pr-20">02 46 91 07 42</p>
             </div>
-            
+
         </footer>
 
 
