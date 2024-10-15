@@ -7,7 +7,7 @@ function HeroSecton() {
             {/* Seção de texto, ajustando para duas linhas */}
             <div className="w-full text-center mb-8 px-4">
                 <h1 className="text-footer-color text-6xl md:text-8xl font-bold font-alegreyaSans leading-tight max-w-4xl mx-auto">
-                    Il est important de vivre <br /> le moment présent
+                    Il est important de vivre le moment présent
                 </h1>
             </div>
 
