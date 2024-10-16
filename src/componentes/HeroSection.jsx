@@ -1,26 +1,17 @@
 import React from "react";
-import imgPizza from '../assets/DIONY-S-PIZZ-pizza-1.png';
+import imgPizza from '../assets/ImagePizza.png';
 
 function HeroSecton() {
     return (
-        <div className="h-[calc(100vh-5rem)] w-full relative bg-creme flex flex-col justify-center items-center">
-            {/* Seção de texto, ajustando para duas linhas */}
-            <div className="w-full text-center mb-8 px-4">
-                <h1 className="text-footer-color text-6xl md:text-8xl font-bold font-alegreyaSans leading-tight max-w-4xl mx-auto">
-                    Il est important de vivre le moment présent
-                </h1>
+        <div className="w-full h-full relative bg-creme flex justify-center items-center">
+          <div className="text-center flex flex-col items-center mt-16">
+            <h1 className="absolute text-center text-footer-color text-7xl font-alegreyaSans font-bold">Il est important de vivre<br/>le moment présent.</h1>
+            <div className="relative">
+              <img src={imgPizza} alt="PizzaHeroSection" className="w-full h-auto mt-36" />
             </div>
-
-            {/* Seção da imagem, fixada na parte de baixo */}
-            <div className="w-full absolute bottom-0 flex justify-center">
-                <img 
-                    src={imgPizza} 
-                    className="w-auto h-auto max-w-full max-h-[50vh]" 
-                    alt="Pizza"
-                />
-            </div>
+          </div>
         </div>
-    );
+      );
 }
 
 export default HeroSecton;
