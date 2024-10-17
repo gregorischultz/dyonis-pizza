@@ -5,8 +5,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/*css do link(texto) da barra de navegaçao*/
 @layer components {
     .li-link {
         @apply text-musgo text-xl font-alegreyaSans font-bold leading-6 break-words;
     }
-}
+};
+
+/*css do componente nos Services*/
+@layer components {
+    .div-cart-NosServices {
+        @apply flex flex-col justify-start items-center gap-6
+    }
+};
+
+@layer components {
+    .div-text {
+        @apply self-stretch h-[102px] flex flex-col justify-start items-start gap-3
+    }
+};
+
+@layer components {
+    .h3 {
+        @apply self-stretch text-center text-black text-2xl font-alegreyaSans font-bold leading-7 break-words
+    }
+};
+
+@layer components {
+    .p {
+        @apply self-stretch text-center text-black text-base font-montserrat font-medium leading-5 break-words
+    }
+};
