@@ -36,3 +36,22 @@
         @apply self-stretch text-center text-black text-base font-montserrat font-medium leading-5 break-words
     }
 };
+
+/*css do componente Visite*/
+@layer components {
+    .p1 {
+        @apply text-black text-2xl font-alegreyaSans font-bold leading-7 break-words
+    }
+}
+
+@layer components {
+    .p2 {
+        @apply text-black text-xl font-montserrat font-medium leading-6
+    }
+}
+
+@layer components {
+    .div-icons {
+        @apply self-stretch flex justify-start items-center gap-3
+    }
+}
