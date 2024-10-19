@@ -1,3 +1,5 @@
+/*Componente da page Home.jsx*/
+
 import React from "react";
 import imgPizza from '../assets/ImagePizza.png';
 

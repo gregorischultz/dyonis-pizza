@@ -1,3 +1,5 @@
+/*Componente da page Home.jsx*/
+
 import React from "react";
 import map from '../assets/map.png';
 import message from '../assets/message.png';

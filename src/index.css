@@ -40,7 +40,7 @@
 /*css do componente Visite*/
 @layer components {
     .p1 {
-        @apply text-black text-2xl font-alegreyaSans font-bold leading-7 break-words
+        @apply text-black text-2xl font-alegreyaSans font-bold leading-7 break-words /*esse componente p1 é usado no componente CardPizza tambem*/
     }
 }
 
