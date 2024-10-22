@@ -1,3 +1,5 @@
+/*Componente da page Home.jsx*/
+
 import React from "react";
 import emporter from '../assets/emporte.png';
 import evenements from '../assets/evenements.png';

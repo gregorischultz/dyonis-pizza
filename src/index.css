@@ -40,7 +40,7 @@
 /*css do componente Visite*/
 @layer components {
     .p1 {
-        @apply text-black text-2xl font-alegreyaSans font-bold leading-7 break-words
+        @apply text-black text-2xl font-alegreyaSans font-bold leading-7 break-words /*esse componente p1 é usado no componente CardPizza tambem*/
     }
 }
 
@@ -53,5 +53,18 @@
 @layer components {
     .div-icons {
         @apply self-stretch flex justify-start items-center gap-3
+    }
+}
+
+/*css do componente CarteSection*/
+@layer components {
+    .div-button {
+        @apply px-10 py-4 rounded-xl border border-solid border-black flex justify-center items-center
+    }
+}
+
+@layer components {
+    .button {
+        @apply text-black text-2xl font-alegreyaSans font-bold leading-[30px] break-words
     }
 }
