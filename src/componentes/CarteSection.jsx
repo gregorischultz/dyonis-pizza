@@ -81,6 +81,11 @@ function CarteSection() {
             <div className="self-stretch grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
                 {renderProducts()}
             </div>
+            <div className="px-1 py-2 rounded-[64px] border border-solid border-black flex justify-center items-center gap-2">
+                <div className=" flex justify-start items-center gap-1">
+                    <button className="text-center text-black text-xl font-alegreyaSans font-bold leading-6 break-words">Voir tout</button>
+                </div>
+            </div>
         </div>
     )
 };
