@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const CardProduct = ({ image, name, prices, description }) => {
     // Se `prices` existir, configura o estado de tamanho com 'junior' como padrão; caso contrário, `null`
-    const [selectedSize, setSelectedSize] = useState(prices ? 'junior' : null);
+    const [selectedSize, setSelectedSize] = useState(prices ? 'senior' : null);
 
     // Define o preço atual com base em `selectedSize`, ou `prices` se for um objeto de tamanhos
     const currentPrice = prices ? prices[selectedSize] : prices;
@@ -43,7 +43,7 @@ const CardProduct = ({ image, name, prices, description }) => {
                 </div>
             ) : (
                 // Exibir preço fixo se `prices` for apenas uma string (ou seja, para produtos sem variação de tamanho)
-                <div className="text-[#1B1D16] text-xl font-alegreyaSans font-bold">
+                <div className="text-[#1B1D16] text-xl font-alegreyaSans font-bold flex justify-start items-start ">
                     {prices}
                 </div>
             )}
