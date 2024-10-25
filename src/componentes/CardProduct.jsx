@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import PropTypes from 'prop-types';
 
 const CardProduct = ({ image, name, prices, description }) => {
-    // Se `prices` existir, configura o estado de tamanho com 'junior' como padrão; caso contrário, `null`
+    // Se `prices` existir, configura o estado de tamanho com 'senior' como padrão; caso contrário, `null`
     const [selectedSize, setSelectedSize] = useState(prices ? 'senior' : null);
 
     // Define o preço atual com base em `selectedSize`, ou `prices` se for um objeto de tamanhos
     const currentPrice = prices ? prices[selectedSize] : prices;
 
     return (
-        <div className="flex flex-col items-center gap-4 h-[405px] flex-1">
+        <div className="w-[341px] flex flex-col items-center gap-3 h-fit flex-1">
             {/* Imagem do produto */}
             <img className="w-[291px] h-[291px]" src={image} alt={`${name} Card`} />
 
@@ -21,14 +21,14 @@ const CardProduct = ({ image, name, prices, description }) => {
 
             {/* Condicional para exibir seletor de tamanho e preço apenas se `prices` for um objeto */}
             {prices && typeof prices === 'object' ? (
-                <div className="w-full flex flex-col items-start gap-4 px-4">
+                <div className="w-full flex flex-col items-start px-4">
                     {/* Botões de seleção de tamanho */}
                     <div className="flex gap-4">
                         {['junior', 'senior', 'mega'].map(size => (
                             <button
                                 key={size}
                                 onClick={() => setSelectedSize(size)}
-                                className={`px-2 py-1 ${selectedSize === size ? 'font-bold' : 'font-normal'} 
+                                className={`w-[50px] ${selectedSize === size ? 'font-bold' : 'font-normal'} 
                                             text-[#1B1D16] text-sm font-montserrat`}
                             >
                                 {size.charAt(0).toUpperCase() + size.slice(1)}
@@ -37,13 +37,13 @@ const CardProduct = ({ image, name, prices, description }) => {
                     </div>
 
                     {/* Preço do tamanho selecionado */}
-                    <div className="text-[#1B1D16] text-xl font-alegreyaSans font-bold">
+                    <div className="w-full text-[#1B1D16] text-xl font-alegreyaSans font-bold">
                         {currentPrice}
                     </div>
                 </div>
             ) : (
                 // Exibir preço fixo se `prices` for apenas uma string (ou seja, para produtos sem variação de tamanho)
-                <div className="text-[#1B1D16] text-xl font-alegreyaSans font-bold flex justify-start items-start ">
+                <div className="w-full px-4 text-[#1B1D16] text-xl font-alegreyaSans font-bold flex justify-start items-start ">
                     {prices}
                 </div>
             )}
