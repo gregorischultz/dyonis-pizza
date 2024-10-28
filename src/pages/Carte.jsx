@@ -120,100 +120,100 @@ const products = {
         image: pizzaCard,
         name: 'Bolognaise',
         prices: {
-            junior: '€11,20',
-            senior: '€13,50',
-            mega: '€18,20',
+          junior: '€11,20',
+          senior: '€13,50',
+          mega: '€18,20',
         },
         description: "Mozzarella, sauce tomate, viande hacheé, oignons et origan"
-    },
-    {
-      id: 12,
-      image: pizzaCard,
-      name: 'Kebab',
-      prices: {
+      },
+      {
+        id: 12,
+        image: pizzaCard,
+        name: 'Kebab',
+        prices: {
           junior: '€11,20',
           senior: '€13,20',
           mega: '€17,90',
+        },
+        description: "Mozzarella, kebab, oignons, sauce pita et olives"
       },
-      description: "Mozzarella, kebab, oignons, sauce pita et olives"
-  },
-  {
-    id: 13,
-    image: pizzaCard,
-    name: 'Maharadia',
-    prices: {
-        junior: '€9,90',
-        senior: '€12,50',
-        mega: '€17,90',
-    },
-    description: "Mozzarella, poulet, lardons, champignons, olives et tandoori"
-},
-{
-  id: 14,
-  image: pizzaCard,
-  name: 'Cho/Chevre',
-  prices: {
-      junior: '€11,50',
-      senior: '€14,10',
-      mega: '€18,80',
-  },
-  description: "Mozzarella, chorizo, chevre olives et miel"
-},
-{
-  id: 15,
-  image: pizzaCard,
-  name: 'Barbecue',
-  prices: {
-      junior: '€12,30',
-      senior: '€14,70',
-      mega: '€19,90',
-  },
-  description: "Mozzarella, poulet, merguez, viande hacheé et sauce barbecue"
-},
-{
-  id: 16,
-  image: pizzaCard,
-  name: 'Mixte',
-  prices: {
-      junior: '€12,30',
-      senior: '€14,70',
-      mega: '€19,90',
-  },
-  description: "Mozzarella, poulet, merguez, viande hacheé et olives"
-},
-{
-  id: 17,
-  image: pizzaCard,
-  name: 'Burger',
-  prices: {
-      junior: '€12,30',
-      senior: '€14,70',
-      mega: '€19,90',
-  },
-  description: "Mozzarella, viande hachee, oignons, cheddar, cornichons et sauce burger"
-},
-{
-  id: 18,
-  image: pizzaCard,
-  name: 'Mama Bolo',
-  prices: {
-      junior: '€12,30',
-      senior: '€14,70',
-      mega: '€19,90',
-  },
-  description: "Mozzarella, double concentre de tomates, carottes, viande hachee, oignons, vin blanc et basilic"
-},
-{
-  id: 19,
-  image: pizzaCard,
-  name: 'Panding',
-  prices: {
-      junior: '€12,30',
-      senior: '€14,70',
-      mega: '€19,90',
-  },
-  description: "Mozzarella, coppa, burrata, tomates sechees, huile d'olives et basilic"
-},
+      {
+        id: 13,
+        image: pizzaCard,
+        name: 'Maharadia',
+        prices: {
+          junior: '€9,90',
+          senior: '€12,50',
+          mega: '€17,90',
+        },
+        description: "Mozzarella, poulet, lardons, champignons, olives et tandoori"
+      },
+      {
+        id: 14,
+        image: pizzaCard,
+        name: 'Cho/Chevre',
+        prices: {
+          junior: '€11,50',
+          senior: '€14,10',
+          mega: '€18,80',
+        },
+        description: "Mozzarella, chorizo, chevre olives et miel"
+      },
+      {
+        id: 15,
+        image: pizzaCard,
+        name: 'Barbecue',
+        prices: {
+          junior: '€12,30',
+          senior: '€14,70',
+          mega: '€19,90',
+        },
+        description: "Mozzarella, poulet, merguez, viande hacheé et sauce barbecue"
+      },
+      {
+        id: 16,
+        image: pizzaCard,
+        name: 'Mixte',
+        prices: {
+          junior: '€12,30',
+          senior: '€14,70',
+          mega: '€19,90',
+        },
+        description: "Mozzarella, poulet, merguez, viande hacheé et olives"
+      },
+      {
+        id: 17,
+        image: pizzaCard,
+        name: 'Burger',
+        prices: {
+          junior: '€12,30',
+          senior: '€14,70',
+          mega: '€19,90',
+        },
+        description: "Mozzarella, viande hachee, oignons, cheddar, cornichons et sauce burger"
+      },
+      {
+        id: 18,
+        image: pizzaCard,
+        name: 'Mama Bolo',
+        prices: {
+          junior: '€12,30',
+          senior: '€14,70',
+          mega: '€19,90',
+        },
+        description: "Mozzarella, double concentre de tomates, carottes, viande hachee, oignons, vin blanc et basilic"
+      },
+      {
+        id: 19,
+        image: pizzaCard,
+        name: 'Panding',
+        prices: {
+          junior: '€12,30',
+          senior: '€14,70',
+          mega: '€19,90',
+        },
+        description: "Mozzarella, coppa, burrata, tomates sechees, huile d'olives et basilic"
+      },
     ],
   ],
   boissons: [
