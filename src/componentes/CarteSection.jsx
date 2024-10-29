@@ -15,7 +15,7 @@ const products = {
             prices: {
                 junior: '€5,00',
                 senior: '€7,00',
-                mega: '€9,00',
+                mega: '€12,00',
             },
             description: "Mozzarella, avec supplément basilic et huile d'olives"
         },
@@ -24,9 +24,9 @@ const products = {
             image: pizzaCard,
             name: 'Porky',
             prices: {
-                junior: '€5,00',
-                senior: '€7,00',
-                mega: '€9,00',
+                junior: '€8,30',
+                senior: '€9,90',
+                mega: '€14,50',
             },
             description: "Mozzarella et jambon"
         },
@@ -35,42 +35,42 @@ const products = {
             image: pizzaCard,
             name: 'Reine',
             prices: {
-                junior: '€5,00',
-                senior: '€7,00',
-                mega: '€9,00',
+                junior: '€9,00',
+                senior: '€11,00',
+                mega: '€17,00',
             },
-            description: "Mozzarella et jambon"
+            description: "Mozzarella, jambon, champignons et olives"
         },
         {
             id: 4,
             image: pizzaCard,
             name: 'Vegan',
             prices: {
-                junior: '€5,00',
-                senior: '€7,00',
-                mega: '€9,00',
+                junior: '€9,00',
+                senior: '€11,20',
+                mega: '€17,40',
             },
-            description: "Mozzarella et jambon"
+            description: "Pommes de terre, champignons, poivrons, artichauts, tomates et olives "
         },
         {
             id: 5,
             image: pizzaCard,
             name: 'Modena',
             prices: {
-                junior: '€5,00',
-                senior: '€7,00',
-                mega: '€9,00',
+                junior: '€9,30',
+                senior: '€11,60',
+                mega: '€17,90',
             },
-            description: "Mozzarella, jambon, œuf, olives et olives"
+            description: "Mozzarella, jambon, œuf et olives"
         },
         {
             id: 6,
             image: pizzaCard,
             name: 'Orientale',
             prices: {
-                junior: '€5,00',
-                senior: '€7,00',
-                mega: '€9,00',
+                junior: '€9,50',
+                senior: '€11,60',
+                mega: '€17,90',
             },
             description: "Mozzarella, merguez, poivrons, oignons et olives"
         },
@@ -79,9 +79,9 @@ const products = {
             image: pizzaCard,
             name: 'Vegetarienne',
             prices: {
-                junior: '€5,00',
-                senior: '€7,00',
-                mega: '€9,00',
+                junior: '€9,90',
+                senior: '€11,90',
+                mega: '€17,90',
             },
             description: "Mozzarella, champignons, poivrons, artichauts, tomates, olives et basilic"
         },
@@ -90,9 +90,9 @@ const products = {
             image: pizzaCard,
             name: 'Calzone',
             prices: {
-                junior: '€5,00',
-                senior: '€7,00',
-                mega: '€9,00',
+                junior: '€9,90',
+                senior: '€12,50',
+                mega: '€17,90',
             },
             description: "Mozzarella, jambon et œuf"
         },
