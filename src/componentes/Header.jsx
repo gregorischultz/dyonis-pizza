@@ -14,7 +14,7 @@ function Header() {
             </nav>
             <div className="h-12 px-[30px] py-3 bg-black rounded-xl border border-[#1B1D16]">
                 <button className="text-white text-xl font-alegreyaSans font-bold leading-6 break-words">
-                    Réserver une table
+                    Contactez nous
                 </button>
             </div>
         </header>
