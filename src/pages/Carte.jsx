@@ -3,8 +3,8 @@ import NavCarte from '../componentes/NavCarte';
 
 
 const products = {
-  pizzas: [
-    Saucetomate = [
+  pizzas: {
+    Saucetomate : [
       {
         id: 1,
         image: pizzaCard,
@@ -215,7 +215,31 @@ const products = {
         description: "Mozzarella, coppa, burrata, tomates sechees, huile d'olives et basilic"
       },
     ],
-  ],
+    SauceCreme: [
+      {
+        id: 1,
+        image: pizzaCard,
+        name: 'Chevre Miel',
+        prices: {
+          junior: '€9,30',
+          senior: '€11,20',
+          mega: '€17,00',
+        },
+        description: "Mozzarella, parmesan, chevre, olives et miel"
+      },
+      {
+        id: 2,
+        image: pizzaCard,
+        name: 'Flamenkuch',
+        prices: {
+          junior: '€9,80',
+          senior: '€11,90',
+          mega: '€17,90',
+        },
+        description: "Lardons et oignons"
+      },
+    ]
+  },
   boissons: [
     { id: 1, image: '', name: 'Badoit', prices: '€ 1,50', description: "50CL" },
     { id: 2, image: '', name: 'Coca', prices: '€ 1,70', description: "33CL" },
