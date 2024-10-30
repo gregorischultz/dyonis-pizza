@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavCarte from '../componentes/NavCarte';
+import CardProduct from '../componentes/CardProduct';
+import pizzaCard from '../assets/pizzaCard.png'
 
 
 const products = {
   pizzas: {
-    Saucetomate : [
+    Saucetomate: [
       {
         id: 1,
         image: pizzaCard,
@@ -372,13 +374,27 @@ const products = {
 
 
 const Carte = () => {
+  const [category, setCategory] = useState('pizzas');
+
+  //Funçao para renderizar pizzas sauce tomate e creme
+  const renderPizzas = () => {
+
+  }
+
+
   return (
     <div>
       <div className='w-full h-full px-20 py-40 bg-creme flex flex-col justify-start items-center gap-10'>
         <h1 className='w-[1042px] text-center text-footer-color text-6xl font-alegreyaSans font-bold leading-[64px]'>Découvrez nos pizzas base crème ou sauce tomate ainsi que nos paninis !</h1>
       </div>
       <div className='w-full h-full pt-20 pb-40 px-20 flex flex-col justify-start items-center gap-[60px]'>
-        <NavCarte />
+        <NavCarte onChangeCategory={setCategory} />
+        <div className='flex flex-col justify-start items-start gap-6'>
+          <div className='w-[1280px] h-12 border-b border-black border-solid flex justify-start items-start'>
+            <h1 className='max-w-screen-xl text-black text-2xl font-alegreyaSans font-bold leading-12 break-words"'>Base tomate</h1>
+          </div>
+          <div className='max-w-screen-xl inline-flex justify-start items-start gap-2'></div>
+        </div>
       </div>
     </div>
 
