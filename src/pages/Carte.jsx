@@ -378,7 +378,48 @@ const Carte = () => {
 
   //Funçao para renderizar pizzas sauce tomate e creme
   const renderPizzas = () => {
+    return (
+      <div>
+        <div className='w-[1280px] h-12 border-b border-black border-solid flex justify-start items-start'>
+          <h1 className='max-w-screen-xl text-black text-2xl font-alegreyaSans font-bold leading-12 break-words"'>Base Tomate</h1>
+        </div>
+        {products.pizzas.Saucetomate.map(pizza => (
+          <CardProduct
+            key={pizza.id}
+            image={pizza.image}
+            name={pizza.name}
+            prices={pizza.prices}
+            description={pizza.description}
+          />
+        ))}
 
+        <div className='w-[1280px] h-12 border-b border-black border-solid flex justify-start items-start'>
+          <h1 className='max-w-screen-xl text-black text-2xl font-alegreyaSans font-bold leading-12 break-words"'>Base Créme</h1>
+        </div>
+        {products.pizzas.SauceCreme.map(pizza => (
+          <CardProduct
+            key={pizza.id}
+            image={pizza.image}
+            name={pizza.name}
+            prices={pizza.prices}
+            description={pizza.description}
+          />
+        ))}
+      </div>
+    );
+  };
+
+  //Funçao para renderizar os outros produtos
+  const renderAuters = () => {
+    return products[category].map(products => (
+      <CardProduct
+        key={products.id}
+        image={products.image}
+        name={products.name}
+        prices={products.prices}
+        description={products.description}
+      />
+    ))
   }
 
 
@@ -390,10 +431,9 @@ const Carte = () => {
       <div className='w-full h-full pt-20 pb-40 px-20 flex flex-col justify-start items-center gap-[60px]'>
         <NavCarte onChangeCategory={setCategory} />
         <div className='flex flex-col justify-start items-start gap-6'>
-          <div className='w-[1280px] h-12 border-b border-black border-solid flex justify-start items-start'>
-            <h1 className='max-w-screen-xl text-black text-2xl font-alegreyaSans font-bold leading-12 break-words"'>Base tomate</h1>
+          <div className='max-w-screen-xl inline-flex justify-start items-start gap-2'>
+            {category === 'pizzas' ? renderPizzas() : renderAuters()}
           </div>
-          <div className='max-w-screen-xl inline-flex justify-start items-start gap-2'></div>
         </div>
       </div>
     </div>
