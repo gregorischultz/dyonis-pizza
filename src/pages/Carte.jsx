@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavCarte from '../componentes/NavCarte';
+import CardProduct from '../componentes/CardProduct';
+import pizzaCard from '../assets/pizzaCard.png'
 
 
 const products = {
   pizzas: {
-    Saucetomate : [
+    Saucetomate: [
       {
         id: 1,
         image: pizzaCard,
@@ -238,6 +240,105 @@ const products = {
         },
         description: "Lardons et oignons"
       },
+      {
+        id: 3,
+        image: pizzaCard,
+        name: 'Parisienne',
+        prices: {
+          junior: '€11',
+          senior: '€12,60',
+          mega: '€18',
+        },
+        description: "Mozzarella, jambo,, emmenteal et cornichons"
+      },
+      {
+        id: 4,
+        image: pizzaCard,
+        name: 'Campagnarde',
+        prices: {
+          junior: '€11,20',
+          senior: '€13,50',
+          mega: '€18,20',
+        },
+        description: "Mozzarella, poulet, pommes de terre et cchampignons"
+      },
+      {
+        id: 5,
+        image: pizzaCard,
+        name: 'Carbonara',
+        prices: {
+          junior: '€12',
+          senior: '€14,30',
+          mega: '€19',
+        },
+        description: "Mozzarella, parmesan, lardons, oignons et oeuf"
+      },
+      {
+        id: 6,
+        image: pizzaCard,
+        name: 'Savoyarde',
+        prices: {
+          junior: '€12',
+          senior: '€14,30',
+          mega: '€19',
+        },
+        description: "Mozzarella, jambon, pommes de terre er reblochon"
+      },
+      {
+        id: 7,
+        image: pizzaCard,
+        name: 'Tartiflette',
+        prices: {
+          junior: '€12',
+          senior: '€14,30',
+          mega: '€19',
+        },
+        description: "Mozzarella, lardons, pommes de terre, oignons et reblochon"
+      },
+      {
+        id: 8,
+        image: pizzaCard,
+        name: 'Poulzone (Chausson ou ouverte)',
+        prices: {
+          junior: '€12',
+          senior: '€14',
+          mega: '€18,80',
+        },
+        description: "Mozzarella, poulet, cheddar, oeuf et emmental"
+      },
+      {
+        id: 9,
+        image: pizzaCard,
+        name: 'Norvegienne',
+        prices: {
+          junior: '€12,20',
+          senior: '€14,50',
+          mega: '€19,80',
+        },
+        description: "Mozzarella, saumon, pommes de terre, oignons et aneth"
+      },
+      {
+        id: 10,
+        image: pizzaCard,
+        name: 'Samourai',
+        prices: {
+          junior: '€12,30',
+          senior: '€14,70',
+          mega: '€19,90',
+        },
+        description: "Mozzarella, chorizo, jambon, merguez, emmental et sauce samourai"
+      },
+      {
+        id: 11,
+        image: pizzaCard,
+        name: 'Montagnarde',
+        prices: {
+          junior: '€12,50',
+          senior: '€14,90',
+          mega: '€20,20',
+        },
+        description: "Mozzarella, jambon de pays, pommes de terre, reblohon et tomates"
+      },
     ]
   },
   boissons: [
@@ -273,17 +374,84 @@ const products = {
 
 
 const Carte = () => {
+  const [category, setCategory] = useState('pizzas');
+
+  // Função para renderizar as pizzas, seguindo o padrão em colunas.
+  const renderPizzas = () => {
+    return (
+      <div className="w-full flex flex-col gap-12"> {/* Contêiner principal com espaçamento */}
+
+        {/* Base Tomate */}
+        <div className="w-full">
+          <h1 className="text-black text-2xl font-alegreyaSans font-bold leading-12 mb-4">Base Tomate</h1>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {products.pizzas.Saucetomate.map((pizza) => (
+              <CardProduct
+                key={pizza.id}
+                image={pizza.image}
+                name={pizza.name}
+                prices={pizza.prices}
+                description={pizza.description}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Base Créme */}
+        <div className="w-full">
+          <h1 className="text-black text-2xl font-alegreyaSans font-bold leading-12 mb-4">Base Créme</h1>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {products.pizzas.SauceCreme.map((pizza) => (
+              <CardProduct
+                key={pizza.id}
+                image={pizza.image}
+                name={pizza.name}
+                prices={pizza.prices}
+                description={pizza.description}
+              />
+            ))}
+          </div>
+        </div>
+
+      </div>
+    );
+  };
+
+
+
+
+  //Funçao para renderizar os outros produtos
+  const renderAuters = () => {
+    return products[category].map(products => (
+      <CardProduct
+        key={products.id}
+        image={products.image}
+        name={products.name}
+        prices={products.prices}
+        description={products.description}
+      />
+    ))
+  }
+
+
   return (
     <div>
       <div className='w-full h-full px-20 py-40 bg-creme flex flex-col justify-start items-center gap-10'>
-        <h1 className='w-[1042px] text-center text-footer-color text-6xl font-alegreyaSans font-bold leading-[64px]'>Découvrez nos pizzas base crème ou sauce tomate ainsi que nos paninis !</h1>
+        <h1 className='w-[1042px] text-center text-footer-color text-6xl font-alegreyaSans font-bold leading-[64px]'>
+          Découvrez nos pizzas base crème ou sauce tomate ainsi que nos paninis !
+        </h1>
       </div>
       <div className='w-full h-full pt-20 pb-40 px-20 flex flex-col justify-start items-center gap-[60px]'>
-        <NavCarte />
+        <NavCarte onChangeCategory={setCategory} />
+        <div className='w-full flex flex-col justify-center items-center gap-6'>
+          {category === 'pizzas' ? renderPizzas() : (
+            <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4'>
+              {renderAuters()}
+            </div>
+          )}
+        </div>
       </div>
     </div>
-
   );
-};
-
+}
 export default Carte;
