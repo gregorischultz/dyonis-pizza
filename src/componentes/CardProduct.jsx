@@ -9,12 +9,12 @@ const CardProduct = ({ image, name, prices, description }) => {
     const currentPrice = prices ? prices[selectedSize] : prices;
 
     return (
-        <div className="w-[341px] flex flex-col items-center gap-3 h-fit flex-1">
+        <div className="w-[341px] flex flex-col items-center gap-3 p-4 h-fit flex-1">
             {/* Imagem do produto */}
-            <img className="w-[291px] h-[291px]" src={image} alt={`${name} Card`} />
+            <img className="w-[291px] h-[291px] mb-3" src={image} alt={`${name} Card`} />
 
             {/* Informações principais do produto */}
-            <div className="w-full flex flex-col items-start px-4">
+            <div className="w-full flex flex-col items-start px-4 mb-4">
                 <h3 className="text-[#1B1D16] text-2xl font-alegreyaSans font-bold">{name}</h3>
                 <p className="text-[#1B1D16] text-sm font-montserrat">{description}</p>
             </div>
