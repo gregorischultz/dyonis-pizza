@@ -238,6 +238,105 @@ const products = {
         },
         description: "Lardons et oignons"
       },
+      {
+        id: 3,
+        image: pizzaCard,
+        name: 'Parisienne',
+        prices: {
+          junior: '€11',
+          senior: '€12,60',
+          mega: '€18',
+        },
+        description: "Mozzarella, jambo,, emmenteal et cornichons"
+      },
+      {
+        id: 4,
+        image: pizzaCard,
+        name: 'Campagnarde',
+        prices: {
+          junior: '€11,20',
+          senior: '€13,50',
+          mega: '€18,20',
+        },
+        description: "Mozzarella, poulet, pommes de terre et cchampignons"
+      },
+      {
+        id: 5,
+        image: pizzaCard,
+        name: 'Carbonara',
+        prices: {
+          junior: '€12',
+          senior: '€14,30',
+          mega: '€19',
+        },
+        description: "Mozzarella, parmesan, lardons, oignons et oeuf"
+      },
+      {
+        id: 6,
+        image: pizzaCard,
+        name: 'Savoyarde',
+        prices: {
+          junior: '€12',
+          senior: '€14,30',
+          mega: '€19',
+        },
+        description: "Mozzarella, jambon, pommes de terre er reblochon"
+      },
+      {
+        id: 7,
+        image: pizzaCard,
+        name: 'Tartiflette',
+        prices: {
+          junior: '€12',
+          senior: '€14,30',
+          mega: '€19',
+        },
+        description: "Mozzarella, lardons, pommes de terre, oignons et reblochon"
+      },
+      {
+        id: 8,
+        image: pizzaCard,
+        name: 'Poulzone (Chausson ou ouverte)',
+        prices: {
+          junior: '€12',
+          senior: '€14',
+          mega: '€18,80',
+        },
+        description: "Mozzarella, poulet, cheddar, oeuf et emmental"
+      },
+      {
+        id: 9,
+        image: pizzaCard,
+        name: 'Norvegienne',
+        prices: {
+          junior: '€12,20',
+          senior: '€14,50',
+          mega: '€19,80',
+        },
+        description: "Mozzarella, saumon, pommes de terre, oignons et aneth"
+      },
+      {
+        id: 10,
+        image: pizzaCard,
+        name: 'Samourai',
+        prices: {
+          junior: '€12,30',
+          senior: '€14,70',
+          mega: '€19,90',
+        },
+        description: "Mozzarella, chorizo, jambon, merguez, emmental et sauce samourai"
+      },
+      {
+        id: 11,
+        image: pizzaCard,
+        name: 'Montagnarde',
+        prices: {
+          junior: '€12,50',
+          senior: '€14,90',
+          mega: '€20,20',
+        },
+        description: "Mozzarella, jambon de pays, pommes de terre, reblohon et tomates"
+      },
     ]
   },
   boissons: [
