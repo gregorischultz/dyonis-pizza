@@ -379,7 +379,7 @@ const Carte = () => {
   // Função para renderizar as pizzas, seguindo o padrão em colunas.
   const renderPizzas = () => {
     return (
-      <div className="w-full flex flex-col gap-12"> {/* Contêiner principal com espaçamento */}
+      <div className="w-full flex flex-col gap-4"> {/* Contêiner principal com espaçamento */}
 
         {/* Base Tomate */}
         <div className="w-full">

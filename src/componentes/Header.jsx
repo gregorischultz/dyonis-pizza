@@ -8,7 +8,6 @@ function Header() {
             <nav className="flex justify-center items-center gap-10">
                 <Link to="/" className="li-link">Home</Link>
                 <Link to="/Carte" className="li-link">Carte</Link>
-                <Link to="/Services" className="li-link">Services</Link>
                 <Link to="Apropos" className="li-link">À propos</Link>
             </nav>
             <div className="h-12 px-[30px] py-3 bg-black rounded-xl border border-[#1B1D16]">
