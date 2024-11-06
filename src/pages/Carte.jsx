@@ -384,7 +384,7 @@ const Carte = () => {
         {/* Base Tomate */}
         <div className="w-full">
           <h1 className="text-black text-2xl font-alegreyaSans font-bold leading-12 mb-4">Base Tomate</h1>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {products.pizzas.Saucetomate.map((pizza) => (
               <CardProduct
                 key={pizza.id}
@@ -400,7 +400,7 @@ const Carte = () => {
         {/* Base Créme */}
         <div className="w-full">
           <h1 className="text-black text-2xl font-alegreyaSans font-bold leading-12 mb-4">Base Créme</h1>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {products.pizzas.SauceCreme.map((pizza) => (
               <CardProduct
                 key={pizza.id}
@@ -443,9 +443,9 @@ const Carte = () => {
       </div>
       <div className='w-full h-full pt-20 pb-40 px-20 flex flex-col justify-start items-center gap-[60px]'>
         <NavCarte onChangeCategory={setCategory} />
-        <div className='w-full flex flex-col justify-center items-center gap-6'>
+        <div className='w-full flex flex-col justify-center items-center gap-4'>
           {category === 'pizzas' ? renderPizzas() : (
-            <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4'>
+            <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4'>
               {renderAuters()}
             </div>
           )}
