@@ -68,3 +68,16 @@
         @apply text-black text-2xl font-alegreyaSans font-bold leading-[30px] break-words
     }
 }
+
+/*css da segunda parte da pagina a propos*/
+@layer components {
+    .h2Aprops {
+        @apply self-stretch text-black text-4xl font-alegreyaSans font-bold leading-[48px] break-words
+    }
+}
+
+@layer components {
+    .pApropos {
+        @apply self-stretch text-black text-xl font-montserrat font-medium leading-6 break-words
+    }
+}
