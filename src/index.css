@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Alegreya+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -66,5 +67,18 @@
 @layer components {
     .button {
         @apply text-black text-2xl font-alegreyaSans font-bold leading-[30px] break-words
+    }
+}
+
+/*css da segunda parte da pagina a propos*/
+@layer components {
+    .h2Aprops {
+        @apply self-stretch text-black text-4xl font-alegreyaSans font-bold leading-[48px] break-words
+    }
+}
+
+@layer components {
+    .pApropos {
+        @apply self-stretch text-black text-xl font-montserrat font-medium leading-6 break-words
     }
 }

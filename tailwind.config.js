@@ -14,7 +14,8 @@ export default {
       fontFamily : {
         righteous: ['Righteous', 'sans-serif'],
         alegreyaSans: ['Alegreya Sans', 'sans-serif'],
-        montserrat : ['Montserrat', 'sans-serif']
+        montserrat : ['Montserrat', 'sans-serif'],
+        monrop : ['Manrope', 'sans-serif']
       }
     },
   },
