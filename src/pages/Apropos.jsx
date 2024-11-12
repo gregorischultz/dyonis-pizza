@@ -6,6 +6,8 @@ import emporter from '../assets/emporte.png';
 import evenements from '../assets/evenements.png';
 import terrasse from '../assets/terrasse.png';
 
+import Carousel from '../componentes/Carousel.jsx';
+
 
 
 const Apropos = () => {
@@ -61,7 +63,7 @@ const Apropos = () => {
       <div className='w-full h-full pt-10 pb-20 px-20 flex flex-col justify-start items-start gap-[72px]'>
         <h1 className='text-black text-[64px] font-alegreyaSans font-bold leading-[64px] break-words'>Ce que nos clients pensent de nous</h1>
         <div className='w-full h-full px-20 py-4 flex justify-center items-center gap-8'>
-          
+          <Carousel />
         </div>
       </div>
     </div>
