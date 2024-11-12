@@ -20,7 +20,7 @@ function Visite() {
                         <h2 className="self-stretch text-black text-4xl font-alegreyaSans font-bold leading-[48px] break-words">Horaires d'ouverture</h2>
                         <div className="self-stretch flex justify-start items-center gap-4">
                             <p className="p1">Lundi : <br />Mar-Jeu :<br />Ven-Sam :<br />Dimanche :</p>
-                            <p className="p1">Fermé<br />11:30 - 14:00 18:00 - 22:00<br />11:30 - 14:00 18:00 - 23:00<br />18:00 - 22:00</p>
+                            <p className="p1">Fermé<br />11:30 - 14:00 / 18:00 - 22:00<br />11:30 - 14:00 / 18:00 - 23:00<br />18:00 - 22:00</p>
                         </div>
                     </div>
                     <div className="self-stretch h-32 flex flex-col justify-start items-start gap-4">
