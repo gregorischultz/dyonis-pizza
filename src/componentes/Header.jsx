@@ -1,10 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Logo from '../assets/LOGO.png'
+
 function Header() {
     return (
         <header className="bg-creme py-5 px-20 w-full h-20 flex justify-between items-center fixed top-0 left-0 z-50">
-            <div className="text-musgo text-lg font-normal break-words font-righteous">Diony's Pizz</div>
+            <div className="flex justify-start items-center gap-3">
+                <img className="w-[65.77px] h-[60px]" src={Logo} />
+                <div className="text-musgo text-lg font-normal break-words font-righteous">Diony's Pizz</div>
+            </div>
             <nav className="flex justify-center items-center gap-10">
                 <Link to="/" className="li-link">Home</Link>
                 <Link to="/Carte" className="li-link">Carte</Link>

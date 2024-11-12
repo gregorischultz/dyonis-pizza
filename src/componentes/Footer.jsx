@@ -1,14 +1,17 @@
 import React from "react";
 import instaIMG from '../assets/instaImg.png';
 import faceIMG from '../assets/faceImg.png';
+import Logo from '../assets/LOGO.png';
 
 
 function Footer() {
     return (
         <footer className="w-full h-full p-16 relative bg-footer-color">
             <div className="absolute left-20 top-10 flex flex-col justify-start items-start gap-6">
-                {/* Nome da Pizzaria */}
-                <h1 className="text-black text-[39.83px] font-righteous font-normal">Diony’s Pizz</h1>
+                <div className="flex justify-start items-center gap-3">
+                    <img className="w-[65.77px] h-[60px]" src={Logo} />
+                    <div className="text-musgo text-lg font-normal break-words font-righteous">Diony's Pizz</div>
+                </div>
 
                 {/* Ícones de redes sociais */}
                 <div className="flex justify-start items-start gap-8">
