@@ -5,6 +5,8 @@ import pizzaCard from '../assets/pizzaCard.png';
 import CardProduct from '../componentes/CardProduct';
 import NavCarte from "./NavCarte";
 
+import { Link } from "react-router-dom";
+
 
 const products = {
     pizzas: [
@@ -151,7 +153,7 @@ function CarteSection() {
             </div>
             <div className="px-1 py-2 rounded-[64px] border border-solid border-black flex justify-center items-center gap-2">
                 <div className=" flex justify-start items-center gap-1">
-                    <button className="text-center text-black text-xl font-alegreyaSans font-bold leading-6 break-words">Voir tout</button>
+                    <Link to="/Carte"><button className="text-center text-black text-xl font-alegreyaSans font-bold leading-6 break-words">Voir tout</button></Link>
                 </div>
             </div>
         </div>
