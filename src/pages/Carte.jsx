@@ -208,7 +208,7 @@ const products = {
       {
         id: 19,
         image: pizzaCard,
-        name: 'Panding',
+        name: 'Pandino',
         prices: {
           junior: '€12,30',
           senior: '€14,70',
