@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import imgPizza from '../assets/Imagempizza2.png';
+import imgPizza from '../assets/ImagemPizza2.png';
 import emporter from '../assets/emporte.png';
 import evenements from '../assets/evenements.png';
 import terrasse from '../assets/terrasse.png';
