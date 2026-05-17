@@ -1,11 +1,93 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <!-- SEO principal -->
+    <title>Diony's Pizz — Pizzeria à Saint-Denis-en-Val (45560)</title>
+    <meta name="description" content="Pizzeria artisanale à Saint-Denis-en-Val. Pizzas base tomate ou crème, à emporter ou sur place. Ouvert mar–dim. Appelez le 02 46 91 07 42." />
+    <meta name="keywords" content="pizzeria saint denis en val, pizza orléans, diony's pizz, pizza à emporter 45560, pizzeria loiret" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://dyonis-pizza.vercel.app/" />
+
+    <!-- Open Graph (partage sur réseaux sociaux) -->
+    <meta property="og:type" content="restaurant" />
+    <meta property="og:title" content="Diony's Pizz — Pizzeria à Saint-Denis-en-Val" />
+    <meta property="og:description" content="Pizzas artisanales base tomate ou crème à Saint-Denis-en-Val. À emporter ou sur place, terrasse disponible." />
+    <meta property="og:image" content="/logo.png" />
+    <meta property="og:url" content="https://dyonis-pizza.vercel.app/" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Diony's Pizz" />
+
+    <!-- Google Search Console -->
     <meta name="google-site-verification" content="CmWCsy4o5UB_vFIJbj9oxHRabkDCQBItXPVj9PCnnj0" />
-    <title>DIONY'S PIZZ</title>
+
+    <!-- Données structurées JSON-LD (Google rich results) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Diony's Pizz",
+      "image": "https://dyonis-pizza.vercel.app/logo.png",
+      "url": "https://dyonis-pizza.vercel.app",
+      "telephone": "0246910742",
+      "email": "dionyspizz@gmail.com",
+      "servesCuisine": "Pizza",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "130 Rue de Mellay",
+        "addressLocality": "Saint-Denis-en-Val",
+        "postalCode": "45560",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.8637,
+        "longitude": 1.9897
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"],
+          "opens": "11:30",
+          "closes": "14:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"],
+          "opens": "18:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday", "Saturday"],
+          "opens": "11:30",
+          "closes": "14:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday", "Saturday"],
+          "opens": "18:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday"],
+          "opens": "18:00",
+          "closes": "22:00"
+        }
+      ],
+      "hasMenu": "https://dyonis-pizza.vercel.app/Carte",
+      "menu": "https://dyonis-pizza.vercel.app/Carte",
+      "acceptsReservations": true
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
