@@ -1,41 +1,113 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Popup from "./Popup";
-import { Link } from "react-router-dom";
+import Logo from '../assets/LOGO.png';
 
-import Logo from '../assets/LOGO.png'
+const links = [
+  { name: "Home", to: "/" },
+  { name: "Carte", to: "/Carte" },
+  { name: "À propos", to: "/Apropos" },
+];
 
 function Header() {
-    const [isPopupOpen, setIsPopupOpen] = useState(false); //estado para controlar o popup
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
-    const openPopup = () => { //funçao para abrir o popup
-        setIsPopupOpen(true)
-    };
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    const closePopup = () => { //funçao para fechar o popup
-        setIsPopupOpen(false)
-    }
+  // Fecha o menu mobile ao navegar
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location.pathname]);
 
-    return (
-        <header className="bg-creme py-5 px-20 w-full h-20 flex justify-between items-center fixed top-0 left-0 z-50">
-            <div className="flex justify-start items-center gap-3">
-                <img className="w-[65.77px] h-[60px]" src={Logo} />
-                <div className="text-musgo text-lg font-normal break-words font-righteous">Diony's Pizz</div>
-            </div>
-            <nav className="flex justify-center items-center gap-10">
-                <Link to="/" className="li-link">Home</Link>
-                <Link to="/Carte" className="li-link">Carte</Link>
-                <Link to="Apropos" className="li-link">À propos</Link>
-            </nav>
-            <div className="h-12 px-[30px] py-3 bg-black rounded-xl border border-[#1B1D16]">
-                <button className="text-white text-xl font-alegreyaSans font-bold leading-6 break-words" onClick={openPopup}>
-                    Contactez nous
-                </button>
-            </div>
+  return (
+    <>
+      <header
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+          scrolled ? "bg-creme shadow-md py-3" : "bg-creme py-5"
+        }`}
+      >
+        <div className="px-4 sm:px-8 md:px-16 lg:px-20 flex items-center justify-between">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-3 shrink-0">
+            <img className="w-[52px] h-[48px] object-contain" src={Logo} alt="Logo Diony's Pizz" />
+            <span className="text-musgo text-lg font-righteous hidden sm:block">Diony's Pizz</span>
+          </Link>
 
-            {isPopupOpen && <Popup onClose={closePopup}/>} {/*vai redenrizar o popup*/}
-        </header>
-    );
+          {/* Nav desktop */}
+          <nav className="hidden md:flex items-center gap-8">
+            {links.map((link) => (
+              <Link
+                key={link.name}
+                to={link.to}
+                className={`nav-link ${location.pathname === link.to ? "nav-link-active" : ""}`}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
+
+          {/* CTA + hamburger */}
+          <div className="flex items-center gap-4">
+            <button
+              className="btn-primary hidden sm:block"
+              onClick={() => setIsPopupOpen(true)}
+            >
+              Contactez-nous
+            </button>
+
+            {/* Hamburger */}
+            <button
+              className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-lg hover:bg-creme-dark transition-colors"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Menu"
+            >
+              <span className={`block h-0.5 bg-musgo transition-all duration-300 ${mobileOpen ? "w-6 rotate-45 translate-y-2" : "w-6"}`} />
+              <span className={`block h-0.5 bg-musgo transition-all duration-300 ${mobileOpen ? "opacity-0 w-0" : "w-5"}`} />
+              <span className={`block h-0.5 bg-musgo transition-all duration-300 ${mobileOpen ? "w-6 -rotate-45 -translate-y-2" : "w-6"}`} />
+            </button>
+          </div>
+        </div>
+
+        {/* Menu mobile */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            mobileOpen ? "max-h-72 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <nav className="flex flex-col gap-1 px-4 py-4 border-t border-creme-dark animate-slide-down">
+            {links.map((link) => (
+              <Link
+                key={link.name}
+                to={link.to}
+                className={`px-4 py-3 rounded-lg font-alegreyaSans font-bold text-lg transition-colors ${
+                  location.pathname === link.to
+                    ? "bg-footer-color text-white"
+                    : "text-musgo hover:bg-creme-dark"
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <button
+              className="mt-2 btn-primary text-center"
+              onClick={() => { setIsPopupOpen(true); setMobileOpen(false); }}
+            >
+              Contactez-nous
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      {isPopupOpen && <Popup onClose={() => setIsPopupOpen(false)} />}
+    </>
+  );
 }
 
 export default Header;
