@@ -1,84 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Alegreya+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/*css do link(texto) da barra de navegaçao*/
-@layer components {
-    .li-link {
-        @apply text-musgo text-xl font-alegreyaSans font-bold leading-6 break-words;
-    }
-};
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-/*css do componente nos Services*/
-@layer components {
-    .div-cart-NosServices {
-        @apply flex flex-col justify-start items-center gap-6
-    }
-};
-
-@layer components {
-    .div-text {
-        @apply self-stretch h-[102px] flex flex-col justify-start items-start gap-3
-    }
-};
-
-@layer components {
-    .h3 {
-        @apply self-stretch text-center text-black text-2xl font-alegreyaSans font-bold leading-7 break-words
-    }
-};
-
-@layer components {
-    .p {
-        @apply self-stretch text-center text-black text-base font-montserrat font-medium leading-5 break-words
-    }
-};
-
-/*css do componente Visite*/
-@layer components {
-    .p1 {
-        @apply text-black text-2xl font-alegreyaSans font-bold leading-7 break-words /*esse componente p1 é usado no componente CardPizza tambem*/
-    }
+  * {
+    box-sizing: border-box;
+  }
 }
 
 @layer components {
-    .p2 {
-        @apply text-black text-xl font-montserrat font-medium leading-6
-    }
-}
+  /* Navigation */
+  .nav-link {
+    @apply relative text-musgo text-base font-alegreyaSans font-bold leading-6
+           transition-colors duration-200 hover:text-footer-color
+           after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0
+           after:bg-footer-color after:transition-all after:duration-300
+           hover:after:w-full;
+  }
 
-@layer components {
-    .div-icons {
-        @apply self-stretch flex justify-start items-center gap-3
-    }
-}
+  .nav-link-active {
+    @apply text-footer-color after:w-full;
+  }
 
-/*css do componente CarteSection*/
-@layer components {
-    .div-button {
-        @apply px-10 py-4 rounded-xl border border-solid border-black flex justify-center items-center
-    }
-}
+  /* Botões CTA */
+  .btn-primary {
+    @apply bg-musgo text-white font-alegreyaSans font-bold px-6 py-3 rounded-xl
+           transition-all duration-200 hover:bg-musgo-light hover:shadow-lg
+           active:scale-95;
+  }
 
-@layer components {
-    .button {
-        @apply text-black text-2xl font-alegreyaSans font-bold leading-[30px] break-words
-    }
-}
+  .btn-outline {
+    @apply border-2 border-musgo text-musgo font-alegreyaSans font-bold px-6 py-3 rounded-xl
+           transition-all duration-200 hover:bg-musgo hover:text-white
+           active:scale-95;
+  }
 
-/*css da segunda parte da pagina a propos*/
-@layer components {
-    .h2Aprops {
-        @apply self-stretch text-black text-4xl font-alegreyaSans font-bold leading-[48px] break-words
-    }
-}
+  .btn-accent {
+    @apply bg-accent text-white font-alegreyaSans font-bold px-8 py-3 rounded-xl
+           transition-all duration-200 hover:bg-accent-hover hover:shadow-lg
+           active:scale-95;
+  }
 
-@layer components {
-    .pApropos {
-        @apply self-stretch text-black text-xl font-montserrat font-medium leading-6 break-words
-    }
+  /* Cards de serviço */
+  .service-card {
+    @apply flex flex-col items-center gap-4 p-6 rounded-2xl
+           bg-white/60 backdrop-blur-sm border border-creme-dark
+           transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  /* Seção padrão */
+  .section-padding {
+    @apply px-4 sm:px-8 md:px-16 lg:px-20 py-16;
+  }
+
+  .section-title {
+    @apply text-4xl sm:text-5xl md:text-6xl font-alegreyaSans font-bold leading-tight;
+  }
+
+  /* NavCarte botão */
+  .nav-carte-btn {
+    @apply px-5 py-2.5 rounded-xl border-2 border-musgo font-alegreyaSans font-bold text-lg
+           transition-all duration-200 hover:bg-musgo hover:text-white;
+  }
+
+  .nav-carte-btn-active {
+    @apply bg-musgo text-white;
+  }
+
+  /* Ícones de contato */
+  .contact-row {
+    @apply flex items-center gap-3 text-base font-montserrat font-medium;
+  }
 }

@@ -1,22 +1,26 @@
 import React from "react";
 
-function NavCarte({ onChangeCategory }) {
-    return (
-        <div className="self-stretch flex justify-center items-start gap-8">
-            <div className="div-button">
-                <button onClick={() => onChangeCategory('snacks')} className="button">Snacks</button>
-            </div>
-            <div className="div-button">
-                <button onClick={() => onChangeCategory('pizzas')} className="button">Pizza</button>
-            </div>
-            <div className="div-button">
-                <button onClick={() => onChangeCategory('desserts')} className="button">Desserts</button>
-            </div>
-            <div className="div-button">
-                <button onClick={() => onChangeCategory('boissons')} className="button">Boissons</button>
-            </div>
-        </div>
-    )
-};
+const categories = [
+  { key: "pizzas", label: "Pizzas" },
+  { key: "snacks", label: "Snacks" },
+  { key: "desserts", label: "Desserts" },
+  { key: "boissons", label: "Boissons" },
+];
+
+function NavCarte({ onChangeCategory, current }) {
+  return (
+    <div className="flex flex-wrap justify-center gap-3">
+      {categories.map((cat) => (
+        <button
+          key={cat.key}
+          onClick={() => onChangeCategory(cat.key)}
+          className={`nav-carte-btn ${current === cat.key ? "nav-carte-btn-active" : ""}`}
+        >
+          {cat.label}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 export default NavCarte;

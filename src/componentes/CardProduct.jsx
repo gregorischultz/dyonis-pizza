@@ -1,69 +1,63 @@
 import React, { useState } from "react";
-import PropTypes from 'prop-types';
 
-const CardProduct = ({ image, name, prices, description }) => {
-    // Se `prices` existir, configura o estado de tamanho com 'senior' como padrão; caso contrário, `null`
-    const [selectedSize, setSelectedSize] = useState(prices ? 'senior' : null);
+const SIZES = ['junior', 'senior', 'mega'];
 
-    // Define o preço atual com base em `selectedSize`, ou `prices` se for um objeto de tamanhos
-    const currentPrice = prices ? prices[selectedSize] : prices;
+function CardProduct({ image, name, prices, description }) {
+  const hasSizes = prices && typeof prices === 'object';
+  const [selectedSize, setSelectedSize] = useState(hasSizes ? 'senior' : null);
 
-    return (
-        <div className="w-[341px] flex flex-col items-center gap-3 p-4 h-fit flex-1">
-            {/* Imagem do produto */}
-            <img className="w-[291px] h-[291px] mb-3" src={image} alt={`${name} Card`} />
+  const currentPrice = hasSizes ? prices[selectedSize] : prices;
 
-            {/* Informações principais do produto */}
-            <div className="w-full flex flex-col items-start px-4 mb-4">
-                <h3 className="text-[#1B1D16] text-2xl font-alegreyaSans font-bold">{name}</h3>
-                <p className="text-[#1B1D16] text-sm font-montserrat">{description}</p>
-            </div>
-
-            {/* Condicional para exibir seletor de tamanho e preço apenas se `prices` for um objeto */}
-            {prices && typeof prices === 'object' ? (
-                <div className="w-full flex flex-col items-start px-4">
-                    {/* Botões de seleção de tamanho */}
-                    <div className="flex gap-4">
-                        {['junior', 'senior', 'mega'].map(size => (
-                            <button
-                                key={size}
-                                onClick={() => setSelectedSize(size)}
-                                className={`w-[50px] ${selectedSize === size ? 'font-bold' : 'font-normal'} 
-                                            text-[#1B1D16] text-sm font-montserrat`}
-                            >
-                                {size.charAt(0).toUpperCase() + size.slice(1)}
-                            </button>
-                        ))}
-                    </div>
-
-                    {/* Preço do tamanho selecionado */}
-                    <div className="w-full text-[#1B1D16] text-xl font-alegreyaSans font-bold">
-                        {currentPrice}
-                    </div>
-                </div>
-            ) : (
-                // Exibir preço fixo se `prices` for apenas uma string (ou seja, para produtos sem variação de tamanho)
-                <div className="w-full px-4 text-[#1B1D16] text-xl font-alegreyaSans font-bold flex justify-start items-start ">
-                    {prices}
-                </div>
-            )}
+  return (
+    <div className="flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
+      {/* Imagem ou placeholder */}
+      {image ? (
+        <div className="aspect-square w-full overflow-hidden bg-creme">
+          <img
+            className="w-full h-full object-cover"
+            src={image}
+            alt={name}
+          />
         </div>
-    );
-};
+      ) : (
+        <div className="aspect-square w-full bg-creme flex items-center justify-center">
+          <span className="text-4xl">🍕</span>
+        </div>
+      )}
 
-CardProduct.propTypes = {
-    image: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    // Define `prices` como uma string ou um objeto para suportar variações
-    prices: PropTypes.oneOfType([
-        PropTypes.shape({
-            junior: PropTypes.string.isRequired,
-            senior: PropTypes.string.isRequired,
-            mega: PropTypes.string.isRequired,
-        }),
-        PropTypes.string, // Para produtos com preço fixo
-    ]).isRequired,
-    description: PropTypes.string.isRequired,
-};
+      <div className="flex flex-col gap-2 p-4 flex-1">
+        <h3 className="text-musgo text-lg font-alegreyaSans font-bold leading-snug">{name}</h3>
+        {description && (
+          <p className="text-musgo/50 text-xs font-montserrat leading-relaxed flex-1">{description}</p>
+        )}
+
+        <div className="mt-auto pt-3 border-t border-gray-100">
+          {hasSizes ? (
+            <>
+              <div className="flex gap-2 mb-2">
+                {SIZES.map((size) => (
+                  <button
+                    key={size}
+                    onClick={() => setSelectedSize(size)}
+                    className={`text-xs px-2.5 py-1 rounded-full border font-montserrat font-semibold transition-all duration-150 ${
+                      selectedSize === size
+                        ? "bg-musgo text-white border-musgo"
+                        : "text-musgo/60 border-musgo/20 hover:border-musgo/50"
+                    }`}
+                  >
+                    {size.charAt(0).toUpperCase() + size.slice(1)}
+                  </button>
+                ))}
+              </div>
+              <p className="text-musgo text-xl font-alegreyaSans font-bold">{currentPrice}</p>
+            </>
+          ) : (
+            <p className="text-musgo text-xl font-alegreyaSans font-bold">{prices}</p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default CardProduct;
